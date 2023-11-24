@@ -17,17 +17,17 @@ use App\Http\Controllers\AdministradorController;
 */
 
 //ENDPOINTS PARA ENTIDADE DOCUMENTO//
-Route::get('/documentos', [DocumentoController::class, 'index']);
-Route::get('/documnentos/{id}/download', [DocumentoController::class, 'download']);
-Route::post('/documentos', [DocumentoController::class, 'store']);
-Route::put('/documentos/{id}', [DocumentoController::class, 'update']);
-Route::delete('/documentos/{id}', [DocumentoController::class, 'destroy']);
+Route::get('/documentos', [DocumentoController::class, 'index'])->name('Documentos.index');
+Route::get('/documnentos/{id}/download', [DocumentoController::class, 'download'])->name('Documentos.download');
+Route::post('/documentos', [DocumentoController::class, 'store'])->name('Documentos.store');
+Route::put('/documentos/{id}', [DocumentoController::class, 'update'])->name('Documentos.update');
+Route::delete('/documentos/{id}', [DocumentoController::class, 'destroy'])->name('Documentos.destroy');
 
 //ENDPOINTS PARA ENTIDADE ADMINISTRADOR//
-Route::get('/administradores', [AdministradorController::class, 'index']);
-Route::post('/administradores', [AdministradorController::class, 'store']);
-Route::get('/administradores/{id}', [AdministradorController::class, 'show']);
-Route::put('/administradores/{id}', [AdministradorController::class, 'update']);
-Route::delete('/administradores/{id}', [AdministradorController::class, 'destroy']);
+Route::get('/administradores', [AdministradorController::class, 'index'])->name('administradores.index');
+Route::post('/administradores', [AdministradorController::class, 'store'])->name('administradores.store');
+Route::get('/administradores/{id}', [AdministradorController::class, 'show'])->name('administradores.show');
+Route::put('/administradores/{id}', [AdministradorController::class, 'update'])->name('administradores.update');
+Route::delete('/administradores/{id}', [AdministradorController::class, 'destroy'])->name('administradores.destroy');
 
 
